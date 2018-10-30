@@ -4,20 +4,20 @@ using namespace std;
 
 int main()
 {
-    int number,i, value;
+    int number,i,flag=1;
     cout<<"Enter Number = ";
     cin>>number;
-    value=0;
-    for (i=1;i<=number;i++){
-        if (number%i==0) //Condition to find number who while it modulo with i the value is 0 (zero)
-        value = value +i;
+    for (i=2;i<number/2;i++)
+    {
+        if (number%i==0) 
+        {
+            flag=0;
         }
-        //Conditions to determining prime number or not
-        if(value==(number+1)){
-            cout<<"PRIMES";
-        }
-        else{
-            cout<<"NOT PRIMES";
-        }
+    }
+    if(flag)
+        cout<<"PRIME";
+    else
+        cout<<"NOT PRIME";
+        
     return 0;
 }
